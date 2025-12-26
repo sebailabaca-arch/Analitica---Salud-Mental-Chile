@@ -1,0 +1,63 @@
+Tabla Egresos Hospitalarios
+
+# Egresos Salud Mental = 
+CALCULATE(
+    COUNTA('Egresos Hospitalarios'[DIAG1]),
+    Codigos_CIE10[GLOSA CAPITULO] = "Trastornos mentales y del comportamiento"
+)
+# SE REPITE PARA CADA GRUPO ETAREO: Egresos Salud Mental (10 a 19 años) = 
+CALCULATE(
+    COUNTA('Egresos Hospitalarios'[DIAG1]),
+    Codigos_CIE10[GLOSA CAPITULO] = "Trastornos mentales y del comportamiento",
+    'Egresos Hospitalarios'[Grupo Etareo] = "Entre 10 y 19 años"
+)
+
+#
+
+# Etiqueta Comuna (tarjeta) = 
+VAR ComunaSel = SELECTEDVALUE('Egresos Hospitalarios'[GLOSA_COMUNA_RESIDENCIA])
+RETURN
+IF(
+    HASONEVALUE('Egresos Hospitalarios'[GLOSA_COMUNA_RESIDENCIA]),
+    ComunaSel,
+    IF(
+        ISCROSSFILTERED('Egresos Hospitalarios'[GLOSA_COMUNA_RESIDENCIA]),
+        "Total Región",
+        "Total Región"
+    )
+)
+
+# Etiqueta Regiones (tarjeta) = 
+VAR ComunaSel = SELECTEDVALUE('Egresos Hospitalarios'[GLOSA_REGION_RESIDENCIA])
+RETURN
+IF(
+    HASONEVALUE('Egresos Hospitalarios'[GLOSA_REGION_RESIDENCIA]),
+    ComunaSel,
+    IF(
+        ISCROSSFILTERED('Egresos Hospitalarios'[GLOSA_REGION_RESIDENCIA]),
+        "Total País",
+        "Total País"
+    )
+)
+
+# Columna: Grupo Etareo = 
+SWITCH(
+    TRUE(),
+    'Egresos Hospitalarios'[GRUPO_EDAD] IN {"menor a 7 días", "menor de un año", "1 A 4 AÑOS", "5 A 9 AÑOS", "1 a 9", "2 MESES A MENOS DE 1 AÑO", "28 DIAS A 2 MES", "7 A 27 DIAS"}, "Menor a 10 años",
+    'Egresos Hospitalarios'[GRUPO_EDAD] IN {"1 A 4 AÑOS", "1 a 9"}, "Menor a 10 años",
+    'Egresos Hospitalarios'[GRUPO_EDAD] IN {"10 A 14 AÑOS", "10 a 19", "15 A 19 AÑOS"}, "Entre 10 y 19 años",
+    'Egresos Hospitalarios'[GRUPO_EDAD] IN {"20 A 24 AÑOS", "25 A 29 AÑOS", "20 a 29"}, "Entre 20 y 29 años",
+    'Egresos Hospitalarios'[GRUPO_EDAD] IN {"30 A 34 AÑOS", "35 A 39 AÑOS", "30 a 39"}, "Entre 30 y 39 años",
+    'Egresos Hospitalarios'[GRUPO_EDAD] IN {"40 A 44 AÑOS", "45 A 49 AÑOS", "40 a 49"}, "Entre 40 y 49 años",
+    'Egresos Hospitalarios'[GRUPO_EDAD] IN {"50 A 54 AÑOS", "55 A 59 AÑOS", "50 a 59"}, "Entre 50 y 59 años",
+    'Egresos Hospitalarios'[GRUPO_EDAD] IN {"60 A 64 AÑOS", "65 A 69 AÑOS", "60 a 69"}, "Entre 60 y 69 años",
+    'Egresos Hospitalarios'[GRUPO_EDAD] IN {"70 A 74 AÑOS", "75 A 79 AÑOS", "70 a 79", "80 A 84 AÑOS", "85 A MAS", "80 a 89", "90 Y más"}, "Mayor a 69 años",
+    "Sin Información"
+)
+
+# Columna: SEXO_2 = 
+SWITCH(	
+    TRUE(),
+    'Egresos Hospitalarios'[SEXO] IN {"1", "HOMBRE"}, "Hombre",
+    'Egresos Hospitalarios'[SEXO] IN {"2", "MUJER"}, "Mujer",
+    "Otro")
