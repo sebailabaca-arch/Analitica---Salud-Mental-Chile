@@ -1,0 +1,6 @@
+let
+    Origen = Excel.Workbook(File.Contents("C:DIRECCIÓN\Diccionario BD egresos hospitalario.xlsx"), null, true),
+    Codigos_CIE10_Table = Origen{[Item="Codigos_CIE10",Kind="Table"]}[Data],
+    #"Tipo cambiado" = Table.TransformColumnTypes(Codigos_CIE10_Table,{{"CODIGO SUBCATEGORIA", type text}, {"GLOSA SUBCATEGORIA", type text}, {"CAPITULO", type text}, {"GLOSA CAPITULO", type text}, {"CODIGO GRUPO ", type text}, {"GLOSA GRUPO ", type text}, {"CODIGO CATEGORIA", type text}, {"GLOSA CATEGORIA", type text}})
+in
+    #"Tipo cambiado"

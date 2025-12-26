@@ -1,0 +1,104 @@
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2010.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2011.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2012.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2013.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2014.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2015.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2016.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2017.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2018.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2019.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2019.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2021.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2022.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2023.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"
+
+let
+    Origen = Csv.Document(File.Contents("C:DIRECCIÓN\EGRE_DATOS_ABIERTOS_2024.csv"),[Delimiter=";", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"PERTENENCIA_ESTABLECIMIENTO_SALUD", type text}, {"SEXO", type text}, {"GRUPO_EDAD", type text}, {"ETNIA", type text}, {"GLOSA_PAIS_ORIGEN", type text}, {"COMUNA_RESIDENCIA", Int64.Type}, {"GLOSA_COMUNA_RESIDENCIA", type text}, {"REGION_RESIDENCIA", Int64.Type}, {"GLOSA_REGION_RESIDENCIA", type text}, {"PREVISION", Int64.Type}, {"GLOSA_PREVISION", type text}, {"ANO_EGRESO", Int64.Type}, {"DIAG1", type text}, {"DIAG2", type text}, {"DIAS_ESTADA", Int64.Type}, {"CONDICION_EGRESO", Int64.Type}, {"INTERV_Q", Int64.Type}, {"PROCED", type text}})
+in
+    #"Tipo cambiado"

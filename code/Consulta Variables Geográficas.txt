@@ -1,0 +1,7 @@
+let
+    Origen = Excel.Workbook(File.Contents("C:DIRECCIÓN\Variables Geográficas.xlsx"), null, true),
+    Var_Geográficas_Ventas_Table = Origen{[Item="Var_Geográficas_Ventas",Kind="Table"]}[Data],
+    #"Tipo cambiado" = Table.TransformColumnTypes(Var_Geográficas_Ventas_Table,{{"MACROZONA", type text}, {"ZONA", type text}, {"Cod_Región", type text}, {"REGIÓN", type text}, {"PROVINCIA", type text}, {"NOMBRE COMUNA FINAL", type text}, {"COD_COMUNA", Int64.Type}}),
+    #"Duplicados quitados" = Table.Distinct(#"Tipo cambiado", {"COD_COMUNA"})
+in
+    #"Duplicados quitados"
